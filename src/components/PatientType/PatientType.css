@@ -1,0 +1,97 @@
+.patient-type {
+  padding: var(--sp-3xl) 0;
+  background: var(--color-bg-light);
+}
+
+.patient-type__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.patient-type__card {
+  flex: 1;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-2xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.patient-type__card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.patient-type__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--sp-md);
+}
+
+.patient-type__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.patient-type__icon--accent {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.patient-type__card h3 {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  margin-bottom: var(--sp-sm);
+}
+
+.patient-type__card p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--sp-lg);
+  line-height: 1.5;
+}
+
+.patient-type__btn {
+  width: 100%;
+}
+
+.patient-type__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.patient-type__divider span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-bg-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .patient-type__grid {
+    flex-direction: column;
+  }
+
+  .patient-type__divider {
+    transform: rotate(90deg);
+  }
+}

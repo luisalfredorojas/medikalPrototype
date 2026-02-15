@@ -1,0 +1,47 @@
+.insurance {
+  padding: var(--sp-3xl) 0;
+  background: var(--color-bg-light);
+}
+
+.insurance__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-lg) var(--sp-2xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.insurance__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-sm);
+  transition: var(--transition);
+  filter: grayscale(20%);
+  opacity: 0.8;
+}
+
+.insurance__logo-wrap:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.insurance__logo {
+  max-height: 40px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .insurance__grid {
+    gap: var(--sp-md) var(--sp-lg);
+  }
+
+  .insurance__logo {
+    max-height: 32px;
+    max-width: 90px;
+  }
+}

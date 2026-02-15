@@ -1,0 +1,137 @@
+.locations {
+  padding: var(--sp-3xl) 0;
+  background: var(--color-bg-light);
+}
+
+.locations__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xl);
+}
+
+.locations__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.locations__card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.locations__image-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.locations__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.locations__card:hover .locations__image {
+  transform: scale(1.05);
+}
+
+.locations__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.95);
+  color: var(--color-primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.locations__badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+.locations__info {
+  padding: var(--sp-lg);
+}
+
+.locations__name {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-bottom: var(--sp-sm);
+  color: var(--color-text);
+}
+
+.locations__address {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin-bottom: var(--sp-md);
+}
+
+.locations__hours {
+  margin-bottom: var(--sp-md);
+}
+
+.locations__hours strong,
+.locations__contact strong {
+  font-size: var(--fs-sm);
+  display: block;
+  margin-bottom: var(--sp-xs);
+}
+
+.locations__hours ul {
+  list-style: none;
+}
+
+.locations__hours li {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  padding: 2px 0;
+  padding-left: 12px;
+  position: relative;
+}
+
+.locations__hours li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+.locations__contact {
+  margin-bottom: var(--sp-lg);
+}
+
+.locations__contact p {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.locations__cta {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .locations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .locations__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
